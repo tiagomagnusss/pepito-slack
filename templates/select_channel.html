@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Channel for Pepito Bot</title>
+</head>
+<body>
+    <h1>Select a channel for Pepito Bot</h1>
+    <form action="/slack/select_channel" method="post">
+        <select name="channel_id">
+            {% for channel in channels %}
+            <option value="{{ channel.id }}">{{ channel.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="hidden" name="team_id" value="{{ team_id }}">
+        <input type="submit" value="Select Channel">
+    </form>
+</body>
+</html>

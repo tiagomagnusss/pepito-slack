@@ -1,0 +1,5 @@
+slackclient
+sseclient-py
+python-dotenv
+requests
+flask
